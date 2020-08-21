@@ -4,9 +4,7 @@ import "net/http"
 
 func main() {
 	mux := http.NewServeMux()
-
 	mux.HandleFunc("/", middleware(index()))
-
 	http.ListenAndServe(":8080", mux)
 }
 
